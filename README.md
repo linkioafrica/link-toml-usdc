@@ -14,11 +14,7 @@ This repository hosts the Stellar TOML file for LINK's USDC anchor service.
 The Stellar TOML file is accessible at:
 ```
 https://usdc.linkio.world/.well-known/stellar.toml
-```
 
-**Note:** When accessing the TOML file directly in a browser, it will download rather than display in the browser. This is the expected behavior per the Stellar SEP-1 specification, as TOML files are meant to be machine-readable. For a human-readable view, visit:
-```
-https://usdc.linkio.world/toml-viewer.html
 ```
 
 ## Deployment
