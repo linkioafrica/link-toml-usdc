@@ -1,0 +1,2 @@
+.well-known/** -text
+.well-known/stellar.toml linguist-language=TOML

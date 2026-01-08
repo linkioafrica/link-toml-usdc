@@ -1,0 +1,13 @@
+{
+  "headers": {
+    "/**": {
+      "Access-Control-Allow-Origin": "*"
+    },
+    "/.well-known/stellar.toml": {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*"
+    }
+  },
+  "https_only": true,
+  "root": "./"
+}

@@ -18,21 +18,39 @@ https://usdc.linkio.world/.well-known/stellar.toml
 
 ## Deployment
 
-This repository is designed to be deployed to GitHub Pages or any static hosting service.
+This repository is designed to be deployed to GitHub Pages with special handling for the `.well-known` directory.
 
 ### GitHub Pages Setup
 
 1. Push this repository to GitHub
 2. Go to Settings → Pages
-3. Set source to "Deploy from a branch"
-4. Select the `main` branch and `/ (root)` folder
-5. Configure your custom domain: `usdc.linkio.world`
+3. Set source to "GitHub Actions"
+4. Ensure your custom domain is configured: `usdc.linkio.world`
 
-### Important Notes
+### Important Files for GitHub Pages
 
-- The `.well-known` directory must be served at the root level
-- CORS headers should allow access from any origin
-- The TOML file must be served with `Content-Type: text/plain` or `application/toml`
+This repository includes several special files to ensure proper functionality on GitHub Pages:
+
+- `_config.yml`: Tells GitHub Pages to include the `.well-known` directory
+- `.nojekyll`: Prevents Jekyll from ignoring files that start with underscores or dots
+- `.github/workflows/deploy-pages.yml`: GitHub Action to properly deploy the site
+- `stellar.toml`: Duplicate of the TOML file at the root level for fallback access
+- `_headers`: Configures proper CORS and content type headers
+
+### Troubleshooting Access Issues
+
+If the `.well-known/stellar.toml` path returns a 404 error:
+
+1. Use the alternative URL: `https://usdc.linkio.world/stellar.toml`
+2. Check that the GitHub Action has run successfully
+3. Verify that the `.nojekyll` file exists in the deployed site
+4. Ensure all files in this repository are pushed to GitHub
+
+### CORS and Content Type Headers
+
+For proper functionality, the TOML file must be served with:
+- `Content-Type: text/plain` or `application/toml`
+- `Access-Control-Allow-Origin: *` for CORS support
 
 ## SEP Compliance
 
