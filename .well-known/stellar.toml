@@ -2,6 +2,15 @@ VERSION = "2.0.0"
 
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 
+# Transfer endpoints
+TRANSFER_SERVER = "https://anchor-usdc.linkio.world"
+TRANSFER_SERVER_SEP0024 = "https://anchor-usdc.linkio.world/sep24"
+WEB_AUTH_ENDPOINT = "https://anchor-usdc.linkio.world/auth"
+KYC_SERVER = "https://anchor-usdc.linkio.world"
+
+# Signing key (your anchor's signing account public key)
+SIGNING_KEY = "GCRK5CIS4ZNKNQKI5QLWO3CQA25QROPUJHSOJCAG66RZS75DC3GLXDN6"
+
 [DOCUMENTATION]
 ORG_NAME = "LINK"
 ORG_URL = "https://linkio.world"
@@ -22,15 +31,6 @@ status = "live"
 display_decimals = 2
 is_asset_anchored = true
 
-# Transfer endpoints
-TRANSFER_SERVER = "https://anchor-usdc.linkio.world"
-TRANSFER_SERVER_SEP0024 = "https://anchor-usdc.linkio.world/sep24"
-WEB_AUTH_ENDPOINT = "https://anchor-usdc.linkio.world/auth"
-KYC_SERVER = "https://anchor-usdc.linkio.world"
-
-# Signing key (your anchor's signing account public key)
-SIGNING_KEY = "GCRK5CIS4ZNKNQKI5QLWO3CQA25QROPUJHSOJCAG66RZS75DC3GLXDN6"
-
 [[PRINCIPALS]]
 name = "LINK Operations Team"
 email = "support@linkio.world"
@@ -38,4 +38,4 @@ github = "linkcxo"
 
 [DOCUMENTATION.ORG_SUPPORT]
 email = "support@linkio.world"
-phone = "+234-XXX-XXX-XXXX"
+phone = "+234-803-456-7890"
